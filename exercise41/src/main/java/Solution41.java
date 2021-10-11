@@ -10,45 +10,7 @@ import java.util.Collections;
 
 class Solution41 {
 
-    public void sortNames() {
 
-        ArrayList<String> list = new ArrayList<>();
-
-        try {
-            File outFile = new File("exercise41_output.txt");
-            outFile.createNewFile();
-            FileWriter writer = new FileWriter(outFile);
-
-            File inFile = new File("exercise41_input.txt");
-            Scanner scan = new Scanner(inFile);
-
-            while(scan.hasNext()) {
-                list.add(scan.nextLine());
-            }
-
-            Collections.sort(list, String.CASE_INSENSITIVE_ORDER);
-
-            for(String s : list) {
-                writer.write(s + "\n");
-
-            }
-            writer.close();
-        }
-        catch(Exception e){
-            System.out.println("Error");
-        }
-
-
-    }
-
-    public static void main(String[] args) {
-        final Solution41 obj = new Solution41();
-
-
-        obj.sortNames();
-
-
-    }
 
 
 }
