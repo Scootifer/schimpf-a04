@@ -1,0 +1,9 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+InputFile -> Solution: Read  in file to list
+note over Solution: Sort with collections
+Solution -> OutFile: Print sorted list to out file
+@enduml
