@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 4 Solution
+ *  Copyright 2021 Scott Schimpf
+ */
+
 import java.util.Collections;
 import java.io.File;
 import java.io.FileWriter;
@@ -9,16 +14,16 @@ import java.util.ArrayList;
 
 class Solution41 {
 
-    public void sortNames() {
+    public void sortNames(String folderSet) {
 
         ArrayList<String> list = new ArrayList<>();
 
         try {
-            File outFile = new File("exercise41_output.txt");
+            File outFile = new File(folderSet+"exercise41_output.txt");
             outFile.createNewFile();
             FileWriter writer = new FileWriter(outFile);
 
-            File inFile = new File("exercise41_input.txt");
+            File inFile = new File(folderSet+"exercise41_input.txt");
             Scanner scan = new Scanner(inFile);
 
             while(scan.hasNext()) {
@@ -27,6 +32,8 @@ class Solution41 {
 
             Collections.sort(list, String.CASE_INSENSITIVE_ORDER);
 
+            writer.write("There are " + list.size() + " names:\n");
+            writer.write("--------------------\n");
             for(String s : list) {
                 writer.write(s + "\n");
 
@@ -44,7 +51,7 @@ class Solution41 {
         final Solution41 obj = new Solution41();
 
 
-        obj.sortNames();
+        obj.sortNames("src/main/resources/");
 
 
     }
