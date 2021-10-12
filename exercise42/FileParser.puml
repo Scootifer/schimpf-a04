@@ -1,0 +1,17 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 4 Solution
+ *  Copyright 2021 Scott Schimpf
+ */
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class FileParser {
+    -last_name_list
+    -first_name_list
+    -salary_list
+
+    +readCSV()
+    +printTable()
+}
+
+@enduml
