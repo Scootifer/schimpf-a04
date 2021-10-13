@@ -8,4 +8,13 @@
 
 public class Solution42 {
 
+    public static void main(String[] args) {
+        FileParser fp = new FileParser();
+
+        fp.readCSV("data.csv");
+
+        fp.printTable();
+        //System.out.println(fp.getFirstName(0) + " " + fp.getLastName(0) + " " + fp.getSalary(0));
+    }
+
 }
