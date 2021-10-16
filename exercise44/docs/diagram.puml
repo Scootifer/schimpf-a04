@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+'I can not figure this software out....
+'Not everything here is meant to be a class but I am struggling
+'Getting any resource I find to work as to making functions
+
+abstract class Product {
+    #name: string
+    #price: double
+    #quantity: int
+}
+class Gson {
+    +FromJson()
+}
+
+class FindProduct {
+    +Loops the product list
+    +Compares the name and prints
+}
+Gson <|-- InputJsonFile
+ProductList <|-- Gson
+FindProduct <|-- ProductList
+
+
+
+@enduml
