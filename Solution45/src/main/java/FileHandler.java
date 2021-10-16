@@ -44,11 +44,106 @@ public class FileHandler {
     void findAndReplaceUtilize() {
         for(String[] line: this.lineList) {
             for(int i =0; i<line.length; i++) {
+
                 if(line[i].equals("utilize")) {
                     line[i] = "use";
                 }
+                else if (line[i].equals("Utilize")) {
+                    line[i] = "Use";
+                }
+
+                else if(line[i].contains("Utilize")) {
+                    String newString = "";
+                    int rangeMax;
+                    int rangeMin;
+                    int wordLen = line[i].length();
+                    rangeMin = line[i].indexOf("Utilize");
+                    rangeMax = rangeMin + 7;
+
+                    for(int z = 0; z<wordLen; z++) {
+                        if(z<rangeMin) {
+                            newString += line[i].charAt(z);
+                        }
+                        if(z==rangeMin) {
+                            newString += "Use";
+                        }
+                        if(z>=rangeMax) {
+                            newString += line[i].charAt(z);
+                        }
+                    }
+                    line[i] = newString;
+                }
+                else if(line[i].contains("utilize")) {
+                    String newString = "";
+                    int rangeMax;
+                    int rangeMin;
+                    int wordLen = line[i].length();
+                    rangeMin = line[i].indexOf("utilize");
+                    rangeMax = rangeMin + 7;
+
+                    for(int z = 0; z<wordLen; z++) {
+                        if(z<rangeMin) {
+                            newString += line[i].charAt(z);
+                        }
+                        if(z==rangeMin) {
+                            newString += "use";
+                        }
+                        if(z>=rangeMax) {
+                            newString += line[i].charAt(z);
+                        }
+                    }
+                    line[i] = newString;
+                }
+
+
                 else if (line[i].equals("utilizes")) {
                     line[i] = "uses";
+                }
+                else if (line[i].equals("Utilizes")) {
+                    line[i] = "Uses";
+                }
+
+                else if(line[i].contains("utilizes")) {
+                    String newString = "";
+                    int rangeMax;
+                    int rangeMin;
+                    int wordLen = line[i].length();
+                    rangeMin = line[i].indexOf("utilizes");
+                    rangeMax = rangeMin + 7;
+
+                    for(int z = 0; z<wordLen; z++) {
+                        if(z<rangeMin) {
+                            newString += line[i].charAt(z);
+                        }
+                        if(z==rangeMin) {
+                            newString += "uses";
+                        }
+                        if(z>=rangeMax) {
+                            newString += line[i].charAt(z);
+                        }
+                    }
+                    line[i] = newString;
+                }
+                else if(line[i].contains("Utilizes")) {
+                    String newString = "";
+                    int rangeMax;
+                    int rangeMin;
+                    int wordLen = line[i].length();
+                    rangeMin = line[i].indexOf("Utilizes");
+                    rangeMax = rangeMin + 7;
+
+                    for(int z = 0; z<wordLen; z++) {
+                        if(z<rangeMin) {
+                            newString += line[i].charAt(z);
+                        }
+                        if(z==rangeMin) {
+                            newString += "Uses";
+                        }
+                        if(z>=rangeMax) {
+                            newString += line[i].charAt(z);
+                        }
+                    }
+                    line[i] = newString;
                 }
             }//for i
 
@@ -60,7 +155,7 @@ public class FileHandler {
             File outfile = new File(name);
            boolean o = outfile.createNewFile();
 
-            
+
             FileWriter writer = new FileWriter(outfile);
 
             for(String[] line: this.lineList) {
