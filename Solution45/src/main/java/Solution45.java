@@ -5,6 +5,20 @@
 
 // the solution class will only handle input of the output file name
 
+import java.util.Scanner;
 
 public class Solution45 {
+
+    public static void main(String[] args) {
+        FileHandler fh = new FileHandler();
+        Scanner scan = new Scanner(System.in);
+
+
+        fh.readFile("exercise45_input.txt");
+        fh.findAndReplaceUtilize();
+        System.out.print("Please enter an output file name: ");
+        fh.writeToFile(scan.nextLine());
+
+
+    }
 }
