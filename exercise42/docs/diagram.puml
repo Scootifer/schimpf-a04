@@ -1,0 +1,8 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class FileParser {
+    +readCSV(): loops the file storing what data is next
+    +printTable()
+}
+@enduml
