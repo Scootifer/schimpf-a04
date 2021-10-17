@@ -1,0 +1,12 @@
+@startuml
+
+
+class SiteCreator{
+    +createDirectory()
+    +createIndex()
+    +createJS()
+    +createCSS()
+}
+
+
+@enduml
